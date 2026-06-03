@@ -1228,7 +1228,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   _Orientationtransform: {fileID: 2006823583}
-  _PlayerSpeed: 10
+  _PlayerSpeedKey: 0
+  _PlayerSpeed: 30
+  _SlideKey: 304
+  _SlideMultiplier: 2
+  _SlideDrag: 2
   _JumpKey: 0
   _JumpForce: 8
   _JumpCooldown: 0.5
@@ -1237,6 +1241,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  _GroundDrag: 5
 --- !u!1 &1458475265
 GameObject:
   m_ObjectHideFlags: 0
