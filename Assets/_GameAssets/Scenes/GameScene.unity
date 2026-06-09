@@ -131,8 +131,8 @@ GameObject:
   - component: {fileID: 46896439}
   - component: {fileID: 46896441}
   m_Layer: 0
-  m_Name: RottenWheat
-  m_TagString: RottenWheat
+  m_Name: HolyWheat
+  m_TagString: HolyWheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,9 +183,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 46896438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1f9ec5dbb5b85147af95b747ba7f0f9, type: 3}
+  m_Script: {fileID: 11500000, guid: eaa8d426c4cd74a43be62f8e7aa5ddc5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RottenWheatCollectible
+  m_EditorClassIdentifier: Assembly-CSharp::HolyWheatCollectible
+  _playerController: {fileID: 1430923866}
+  _wheatDesingSO: {fileID: 11400000, guid: 475b15c987c1faa41b96504ade63fa46, type: 2}
 --- !u!1 &125765111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,8 +1048,8 @@ GameObject:
   - component: {fileID: 732673387}
   - component: {fileID: 732673389}
   m_Layer: 0
-  m_Name: HolyWheat
-  m_TagString: HolyWheat
+  m_Name: RottenWheat
+  m_TagString: RottenWheat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,9 +1100,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 732673386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa8d426c4cd74a43be62f8e7aa5ddc5, type: 3}
+  m_Script: {fileID: 11500000, guid: e1f9ec5dbb5b85147af95b747ba7f0f9, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HolyWheatCollectible
+  m_EditorClassIdentifier: Assembly-CSharp::RottenWheatCollectible
+  _playerController: {fileID: 1430923866}
+  _wheatDesingSO: {fileID: 11400000, guid: b4278a51a81c31847a7dd6f515b4e6b9, type: 2}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,6 +2156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35283e8123af66c44910f57730ea8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoldWheatCollectible
+  _playerController: {fileID: 1430923866}
+  _wheatDesingSO: {fileID: 11400000, guid: 80b1d701669e5d944822a033d22a0610, type: 2}
 --- !u!1 &1983760849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3186,5 +3192,5 @@ SceneRoots:
   - {fileID: 1430923863}
   - {fileID: 1679051257}
   - {fileID: 1708890209}
-  - {fileID: 732673388}
   - {fileID: 46896440}
+  - {fileID: 732673388}

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b834832c4bd67c547bbd2acb0aed5df6, type: 3}
   m_Name: HolyWheat
   m_EditorClassIdentifier: Assembly-CSharp::WheatDesingSO
-  _increaseDecreaseMultiplier: 15
+  _increaseDecreaseMultiplier: 8
   _resetboostDuration: 5
