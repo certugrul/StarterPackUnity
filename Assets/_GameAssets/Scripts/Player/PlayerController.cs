@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private bool _isSliding;
     private Rigidbody rb;
 
+    private float _startingMovementSpeed, _startingJumpForce;
     private float horizontalInput, verticalInput;
 
     private Vector3 movementDirection;
@@ -60,6 +61,8 @@ public class PlayerController : MonoBehaviour
         _stateController = GetComponent<StateController>();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        _startingMovementSpeed = _PlayerSpeed;
+        _startingJumpForce = _JumpForce;
 
     }
     private void Update()
@@ -197,7 +200,26 @@ public class PlayerController : MonoBehaviour
     {
         _CanJump = true;
     }
+    public void SetMovementSpeed(float speed, float duration)
+    {
+        _PlayerSpeed += speed;
+        Invoke(nameof(ResetMovementSpeed), duration);
+    }
+    private void ResetMovementSpeed()
+    {
+        _PlayerSpeed = _startingMovementSpeed;
+    }
 
+    public void SetJumpForce(float force, float duration)
+    {
+        _JumpForce += force;
+        Invoke(nameof(ResetJumpForce), duration);
+    }
+    private void ResetJumpForce()
+    {
+        _JumpForce = _startingJumpForce;
+    }
+    #region Helper Functions
 
     private bool IsGrounded()
     {
@@ -213,5 +235,5 @@ public class PlayerController : MonoBehaviour
     {
         return _isSliding;
     }
-
+    #endregion
 }
