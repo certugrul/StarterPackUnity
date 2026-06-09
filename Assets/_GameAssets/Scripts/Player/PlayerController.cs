@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
-   
+   public event Action OnPlayerJump;
     [Header("References")]
 
    [ SerializeField] private Transform _Orientationtransform;
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour
        if(Keyboard.current.spaceKey.wasPressedThisFrame && _CanJump && IsGrounded())
         {
              _CanJump = false;
-            
+           
             PlayerJump();
              Invoke(nameof(ResetJump), _JumpCooldown);
         }
@@ -130,7 +131,7 @@ public class PlayerController : MonoBehaviour
        {
         _stateController.ChangeState(newState);
        }
-       Debug.Log(newState);
+    //    Debug.Log(newState);
     }
 
     private void SetPlayerMovement() 
@@ -184,6 +185,8 @@ public class PlayerController : MonoBehaviour
 
     private void PlayerJump()
     {
+        
+        OnPlayerJump?.Invoke();
         rb.linearVelocity= new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.AddForce(transform.up * _JumpForce, ForceMode.Impulse);
 
