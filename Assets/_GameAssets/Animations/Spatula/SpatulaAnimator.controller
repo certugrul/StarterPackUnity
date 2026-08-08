@@ -34,7 +34,7 @@ AnimatorController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SpatulaAnimator
-  serializedVersion: 6
+  serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: IsSpatulaJumping
     m_Type: 9
@@ -55,10 +55,9 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
-  m_EvaluateTransitionsOnStart: 0
 --- !u!1107 &1831195140301609365
 AnimatorStateMachine:
-  serializedVersion: 7
+  serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}

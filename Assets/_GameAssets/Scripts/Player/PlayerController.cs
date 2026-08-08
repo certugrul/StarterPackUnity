@@ -5,8 +5,7 @@ using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
-   public event Action OnPlayerJumped;
-   public event Action<PlayerState> OnPlayerStateChanged;
+   public event Action OnPlayerJump;
     [Header("References")]
 
    [ SerializeField] private Transform _Orientationtransform;
@@ -134,7 +133,6 @@ public class PlayerController : MonoBehaviour
        if(newState != currentState)
        {
         _stateController.ChangeState(newState);
-        OnPlayerStateChanged?.Invoke(newState);
        }
     //    Debug.Log(newState);
     }
@@ -191,7 +189,7 @@ public class PlayerController : MonoBehaviour
     private void PlayerJump()
     {
         
-        OnPlayerJumped?.Invoke();
+        OnPlayerJump?.Invoke();
         rb.linearVelocity= new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.AddForce(transform.up * _JumpForce, ForceMode.Impulse);
 

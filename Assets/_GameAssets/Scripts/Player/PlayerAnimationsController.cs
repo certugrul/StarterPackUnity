@@ -15,7 +15,7 @@ public class PlayerAnimationsController : MonoBehaviour
      private void Start()
     {
         
-        _PlayerController.OnPlayerJumped += PlayerController_OnPlayerJump;
+        _PlayerController.OnPlayerJump += PlayerController_OnPlayerJump;
     }
     private void Update()
     {
