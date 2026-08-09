@@ -4132,8 +4132,9 @@ MonoBehaviour:
   - {fileID: 968800603}
   - {fileID: 1312520719}
   - {fileID: 1315916853}
-  _playerHealtySprite: {fileID: 0}
-  _playerUnhealtySprite: {fileID: 0}
+  _playerHealtySprite: {fileID: 21300000, guid: f52db0cc606b0d648b3868f7865417c6, type: 3}
+  _playerUnhealtySprite: {fileID: 21300000, guid: 132037a797cdc04469a6e251ee7e2172, type: 3}
+  _scaleDuration: 0.3
 --- !u!1 &2006823582
 GameObject:
   m_ObjectHideFlags: 0
