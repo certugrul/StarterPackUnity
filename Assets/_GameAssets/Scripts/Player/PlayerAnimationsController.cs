@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerAnimationsController : MonoBehaviour
 {
-    
-    [SerializeField] private Animator _PlayerAnimator;
+    [SerializeField]
+    private Animator _PlayerAnimator;
     private PlayerController _PlayerController;
     private StateController _StatesController;
 
@@ -12,30 +12,39 @@ public class PlayerAnimationsController : MonoBehaviour
         _PlayerController = GetComponent<PlayerController>();
         _StatesController = GetComponent<StateController>();
     }
-     private void Start()
+
+    private void Start()
     {
-        
         _PlayerController.OnPlayerJump += PlayerController_OnPlayerJump;
     }
+
     private void Update()
     {
+        if (
+            GameManager.Instance.GetCurrentGameState() != GameState.Play
+            && GameManager.Instance.GetCurrentGameState() != GameState.Resume
+        )
+        {
+            return;
+        }
         SetPlayerAnimations();
     }
-   
-      private void PlayerController_OnPlayerJump()
+
+    private void PlayerController_OnPlayerJump()
     {
         _PlayerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, true);
         Invoke(nameof(ResetJumpingAnimation), 0.5f);
-
     }
+
     private void ResetJumpingAnimation()
     {
         _PlayerAnimator.SetBool(Consts.PlayerAnimations.IS_JUMPING, false);
     }
+
     private void SetPlayerAnimations()
     {
         var currentState = _StatesController.GetCurrentState();
-        
+
         switch (currentState)
         {
             case PlayerState.Idle:
@@ -56,7 +65,4 @@ public class PlayerAnimationsController : MonoBehaviour
                 break;
         }
     }
-  
-
-
 }
