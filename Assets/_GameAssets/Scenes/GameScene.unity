@@ -2648,6 +2648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9c50bdf4ea0b048a7e5a9b2496e775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinPopup
+  _timerUI: {fileID: 1859495211}
   _oneMoreButton: {fileID: 1274191827}
   _mainMenubutton: {fileID: 2086365454}
   _timerText: {fileID: 1069053339}
@@ -2852,6 +2853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1021794765}
+  - component: {fileID: 1021794766}
   m_Layer: 0
   m_Name: LosePopup
   m_TagString: Untagged
@@ -2879,6 +2881,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1021794766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021794764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 154e223824bb1d84da17513fadfcae7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LosePopup
+  _timerUI: {fileID: 1859495211}
+  _tryAgainButton: {fileID: 980462913}
+  _mainMenubutton: {fileID: 853319406}
+  _timerText: {fileID: 550207567}
 --- !u!1 &1040922895
 GameObject:
   m_ObjectHideFlags: 0
